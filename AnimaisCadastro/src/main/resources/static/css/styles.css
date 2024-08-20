@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: blue;
+}
+
+.seletor{
+    background-color: white;
+}

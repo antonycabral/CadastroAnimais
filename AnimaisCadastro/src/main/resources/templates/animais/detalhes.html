@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Animal</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="container">
+        <h1>Detalhes do Animal</h1>
+
+        <div class="animal-info">
+            <p><strong>Nome:</strong> <span th:text="${animal.nome}">Nome do Animal</span></p>
+            <p><strong>Filo:</strong> <span th:text="${animal.filo}">Filo do Animal</span></p>
+            <p><strong>Quantidade de Patas:</strong> <span th:text="${animal.quantidadePatas}">4</span></p>
+            <p><strong>Espécie:</strong> <span th:text="${animal.especie}">Espécie do Animal</span></p>
+        </div>
+
+        <div class="actions">
+            <a th:href="@{/animais}" class="btn btn-primary">Voltar à Lista</a>
+            <a th:href="@{'/animais/' + ${animal.id} + '/editar'}" class="btn btn-warning">Editar</a>
+            <a th:href="@{'/animais/' + ${animal.id} + '/deletar'}" class="btn btn-danger"
+            onclick="return confirm('Tem certeza que deseja excluir este animal?')">Excluir</a>
+        </div>
+    </div>
+</body>
+</html>

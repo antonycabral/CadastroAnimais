@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastro de Animal</title>
+</head>
+<body>
+    <h1>Cadastro de Animal</h1>
+    <form th:action="@{/animais}" th:object="${animal}" method="post">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" th:field="*{nome}" />
+        </div>
+        <div>
+            <label for="filo">Filo:</label>
+            <input type="text" id="filo" th:field="*{filo}" />
+        </div>
+        <div>
+            <label for="quantidadePatas">Quantidade de Patas:</label>
+            <input type="number" id="quantidadePatas" th:field="*{quantidadePatas}" />
+        </div>
+        <div>
+            <label for="especie">Espécie:</label>
+            <input type="text" id="especie" th:field="*{especie}" />
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
